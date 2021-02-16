@@ -1,0 +1,24 @@
+{
+  "name": "xmeme_server",
+  "version": "1.0.0",
+  "description": "Backend for Xmeme",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "run": "node index.js"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "Subham Das",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.0.2",
+    "swagger-ui-express": "^4.1.6",
+    "sweetalert2": "^10.14.0"
+  }
+}

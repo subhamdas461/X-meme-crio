@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="X-Meme stream website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+    <link rel="stylesheet" src="/backend/node_modules/sweetalert2/dist/sweetalert2.min.css"></link>
+    <link rel="image" href="/frontend/assets/icons/loading2.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&family=Sriracha&display=swap" rel="stylesheet"> 
+    <title>X-Meme</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-main-text" onclick="location.reload()">X-Meme Stream</h1>
+    </header>
+    <form class="input_form dropdown-form" novalidate autocomplete="off">
+        <!-- dd = dropdown -->
+        <div class="top-post-dd " onclick="handleDropdown(this)">
+            <h1>Share your meme...</h1>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <!-- inputs -->
+        <div class="name">
+            <p> Meme Owner</p>
+            <input class="global-hide" type="text" placeholder="Full name (max 50 characters)" maxlength="50" size="50">
+            <p class="error-para">Required</p>
+        </div>
+        <div class="caption">
+            <p>Caption</p>
+            <input class="global-hide" type="text"  placeholder="Enter your caption (max 200 characters)" maxlength="200" size="200">
+            <p class="error-para">Required</p>
+        </div>
+        <div class="url">
+            <p>Meme URL</p>
+            <input class="global-hide" type="text"  placeholder="Enter URL of your meme here">
+            <p class="error-para">Required</p>
+        </div>
+        
+        <button class="global-hide" type="button">Submit meme</button>
+    </form>
+
+    <section>
+        <img id="firstL" src="/frontend/assets/icons/whiteLoad.svg" alt="">
+        <!-- Here every post is rendered -->
+    </section>
+    <div class="edit-form global-hide">
+       <div class="edit-top-head">
+           <h1>Edit post</h1>
+           <i class="fas fa-times"></i>
+       </div>
+       <div class="edit-inputs-wrapper">
+            <div class="name">
+                <p> Meme Owner</p>
+                <input type="text" style="user-select: none; cursor: not-allowed; background-color: #e9e9e9c7; border:none" disabled maxlength="50" size="50">
+                <p class="edit-error-para">Required</p>
+            </div>
+            <div class="caption">
+                <p>Caption</p>
+                <input type="text"  placeholder="Enter your caption (max 200 characters)" maxlength="200" size="200">
+                <p class="edit-error-para">Required</p>
+            </div>
+            <div class="url">
+                <p>Meme URL</p>
+                <input type="text"  placeholder="Enter URL of your meme here">
+                <p class="edit-error-para">Required</p>
+            </div>
+            
+            <button class="edit-save-btn" type="button">Save changes</button>
+       </div>
+    </div>
+    <div class="hidden-edit-background global-hide"></div>
+    <script src="/backend/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="/frontend/assets/js/index.js"></script>
+</body>
+</html>
